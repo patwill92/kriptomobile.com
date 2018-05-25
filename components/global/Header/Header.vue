@@ -1,9 +1,5 @@
 <template>
   <div>
-    <nuxt/>
+    HEADER
   </div>
 </template>
-
-<style>
-
-</style>

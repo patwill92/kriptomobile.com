@@ -1,9 +1,5 @@
 <template>
   <div>
-    <nuxt/>
+    FOOTER
   </div>
 </template>
-
-<style>
-
-</style>
