@@ -14,10 +14,8 @@ export default {
 }
 </script>
 
-<style module lang="scss">
-  .root {
-    .child {
-      color: green;
-    }
-  }
+<style module lang="sass">
+  .root
+    .child
+      color: $red
 </style>

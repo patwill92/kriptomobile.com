@@ -10,7 +10,10 @@ module.exports = {
       {hid: 'description', name: 'description', content: 'Nuxt.js project'}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+
+    ],
+    script: [
+      {defer: true, src: 'https://use.fontawesome.com/releases/v5.0.7/js/all.js'}
     ]
   },
   /*
@@ -21,13 +24,10 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLint on save
-    */
     extend(config, {isDev, isClient}) {
       const vueLoader = config.module.rules.find(({loader}) => loader === 'vue-loader');
       vueLoader.options.cssModules = {
-        localIdentName: '[name]__[local]'
+        localIdentName: '[name]__[local]__[hash]'
       };
 
       if (isDev && isClient) {
@@ -42,6 +42,6 @@ module.exports = {
   },
   modules: ['nuxt-sass-resources-loader'],
   sassResources: [
-    '@/assets/scss/partials/_variables.scss'
+    '@/assets/sass/partials/_variables.sass'
   ]
 };
