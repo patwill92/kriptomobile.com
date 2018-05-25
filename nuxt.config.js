@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   css: [
-    '~/assets/sass/styles.sass'
+    '~/assets/bulma.sass'
   ],
   /*
   ** Customize the progress bar color
@@ -45,6 +45,6 @@ module.exports = {
   },
   modules: ['nuxt-sass-resources-loader'],
   sassResources: [
-    '@/assets/sass/partials/_utilities.sass'
+    '@/assets/sass/utilities/_all.sass'
   ]
 };
