@@ -17,7 +17,8 @@ module.exports = {
     ]
   },
   css: [
-    '~/assets/bulma.sass'
+    '~/assets/bulma.sass',
+    '~/assets/styles.sass'
   ],
   /*
   ** Customize the progress bar color

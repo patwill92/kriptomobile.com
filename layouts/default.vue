@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$style.root">
     <Header/>
     <nuxt/>
     <Footer/>
@@ -18,6 +18,11 @@
   }
 </script>
 
-<style>
-
+<style module lang="sass">
+  .root
+    min-height: inherit
+    width: inherit
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto 1fr auto
 </style>
