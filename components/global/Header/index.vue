@@ -4,18 +4,20 @@
       <a class="navbar-item" href="https://bulma.io">
         <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
       </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+    <Burger/>
     </div>
-    <div class="navbar-menu">
-      <div class="navbar-end">
-        <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
-        <nuxt-link class="navbar-item" to="/contact">Contact</nuxt-link>
-      </div>
-    </div>
+   <DesktopMenu/>
   </nav>
 </template>
+
+<script>
+  import Burger from './Burger'
+  import DesktopMenu from './DesktopMenu'
+
+  export default {
+    components: {
+      Burger,
+      DesktopMenu
+    }
+  }
+</script>
