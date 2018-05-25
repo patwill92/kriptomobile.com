@@ -16,6 +16,9 @@ module.exports = {
       {defer: true, src: 'https://use.fontawesome.com/releases/v5.0.7/js/all.js'}
     ]
   },
+  css: [
+    '~/assets/sass/styles.sass'
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -42,6 +45,6 @@ module.exports = {
   },
   modules: ['nuxt-sass-resources-loader'],
   sassResources: [
-    '@/assets/sass/partials/_variables.sass'
+    '@/assets/sass/partials/_utilities.sass'
   ]
 };
