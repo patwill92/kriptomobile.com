@@ -41,6 +41,11 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': false
+      }
     }
   },
   modules: ['nuxt-sass-resources-loader'],
