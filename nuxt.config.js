@@ -1,7 +1,4 @@
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'kriptomobile',
     meta: [
@@ -19,13 +16,7 @@ module.exports = {
   css: [
     '~/assets/styles.sass'
   ],
-  /*
-  ** Customize the progress bar color
-  */
   loading: {color: '#3B8070'},
-  /*
-  ** Build configuration
-  */
   build: {
     extend(config, {isDev, isClient}) {
       const vueLoader = config.module.rules.find(({loader}) => loader === 'vue-loader');

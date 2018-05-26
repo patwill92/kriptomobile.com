@@ -1,21 +1,20 @@
 <template>
-  <section :class="$style.root">
-    <h1 :class="$style.child" class="h-font-11 h-font-md-18 h-font-lg-30">Hello world</h1>
-  </section>
+ <main>
+   <Hero/>
+ </main>
 </template>
 
 <script>
+  import Hero from '@/components/home/Hero'
 export default {
   mounted() {
     console.log(this.$style);
   },
   components: {
+    Hero
   }
 }
 </script>
 
 <style module lang="sass">
-  .root
-    .child
-      color: $red
 </style>
