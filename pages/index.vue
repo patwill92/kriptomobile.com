@@ -1,20 +1,18 @@
 <template>
- <main>
-   <Hero/>
- </main>
+  <main>
+    <Hero/>
+  </main>
 </template>
 
 <script>
   import Hero from '@/components/home/Hero'
-export default {
-  mounted() {
-    console.log(this.$style);
-  },
-  components: {
-    Hero
-  }
-}
-</script>
 
-<style module lang="sass">
-</style>
+  export default {
+    mounted() {
+      console.log(this.$style);
+    },
+    components: {
+      Hero
+    }
+  }
+</script>

@@ -16,7 +16,8 @@ module.exports = {
   css: [
     '~/assets/styles.sass'
   ],
-  loading: {color: '#3B8070'},
+  plugins: ['~/plugins/components.js'],
+  loading: {color: 'hsl(228, 26%, 27%)'},
   build: {
     extend(config, {isDev, isClient}) {
       const vueLoader = config.module.rules.find(({loader}) => loader === 'vue-loader');

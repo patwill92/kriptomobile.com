@@ -2,9 +2,9 @@
   <header class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-        </a>
+        <nuxt-link class="h-font-50 navbar-item has-text-primary" to="/">
+          <v-icon icon="Logo"/>
+        </nuxt-link>
         <Burger :active="active" :toggleActive="toggleActive"/>
       </div>
       <Menu :active="active"/>
