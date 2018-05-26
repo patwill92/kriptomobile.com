@@ -1,7 +1,9 @@
+@import "variables.scss";
+
 @function getSide($type) {
   @return map-get((
     'b': bottom,
-    't': top,
+    't':top,
     'l':left,
     'r':right
   ), $type);
@@ -52,7 +54,7 @@ $sideGroups: ('tb', 'lr');
 $displays: ('none', 'hidden', 'block', 'inline-block', 'inline', 'flex', 'inline-flex');
 $justifies: ('center', 'space-between', 'space-around', 'flex-start', 'flex-end');
 $aligns: ('center', 'baseline', 'flex-start', 'flex-end', 'stretch');
-$sizes: ('11', '12', '14', '15', '18', '20', '30', '50');
+$sizes: ('11', '12', '14', '15', '18', '20', '30', '50', '70');
 $weights: ('light', 'reg', 'bold', 'body');
 $textAligns: ('left', 'right', 'center');
 
@@ -71,6 +73,7 @@ $textAligns: ('left', 'right', 'center');
     }
   }
 }
+
 
 @each $param in $params {
   @each $side in $sides {
@@ -212,7 +215,6 @@ $textAligns: ('left', 'right', 'center');
   @each $weight in $weights {
     .h-font-#{$screen}-#{$weight} {
       @media #{getScreen($screen)} {
-        font-family: getWeight($weight) !important;
         font-weight: getWeightNum($weight) !important;
       }
     }

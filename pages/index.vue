@@ -1,6 +1,6 @@
 <template>
   <section :class="$style.root">
-    <h1 :class="$style.child">Hello world</h1>
+    <h1 :class="$style.child" class="h-font-11 h-font-md-18 h-font-lg-30">Hello world</h1>
   </section>
 </template>
 
