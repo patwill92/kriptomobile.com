@@ -14,7 +14,7 @@
           </span>
         </nuxt-link>
       </div>
-        <Menu :active="active"/>
+        <Menu/>
     </div>
   </header>
 </template>
@@ -24,16 +24,6 @@
   import Menu from './Menu'
 
   export default {
-    data() {
-      return {
-        active: false
-      }
-    },
-    methods: {
-      toggleActive() {
-        this.active = !this.active;
-      }
-    },
     components: {
       Burger,
       Menu

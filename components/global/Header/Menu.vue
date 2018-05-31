@@ -3,7 +3,7 @@
     name: 'DesktopMenu',
     functional: true,
     render(h, ctx) {
-      const {props: {active}, $style} = ctx;
+      const {$style} = ctx;
       return [
         <nav class={['h-display-flex h-align-center h-justify-center h-justify-lg-end', $style.nav]}>
           <div class="h-display-flex h-align-center h-justify-end">
