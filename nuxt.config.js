@@ -16,7 +16,7 @@ module.exports = {
   css: [
     '~/assets/styles.sass'
   ],
-  plugins: ['~/plugins/components.js'],
+  plugins: ['~/plugins/components.js', '~/plugins/twitter.js'],
   loading: {color: 'hsl(228, 26%, 27%)'},
   build: {
     extend(config, {isDev, isClient}) {
