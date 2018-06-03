@@ -1,15 +1,19 @@
 <template>
   <main>
     <Hero/>
+    {{getTweets}}
   </main>
 </template>
 
 <script>
   import Hero from '@/components/home/Hero'
+  import {mapGetters} from 'vuex'
 
   export default {
-    mounted() {
-      console.log(this.$style);
+    computed: {
+      ...mapGetters({
+        getTweets: 'twitter/getTweets'
+      })
     },
     components: {
       Hero
