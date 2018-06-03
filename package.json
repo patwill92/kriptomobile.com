@@ -4,6 +4,9 @@
   "description": "Nuxt.js project",
   "author": "Pat Williams <patrick.rw92@gmail.com>",
   "private": true,
+  "engines": {
+    "node": "9.2.0"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
