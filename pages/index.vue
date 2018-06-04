@@ -2,7 +2,7 @@
   <main class="h-padding-b-40">
     <Hero :image="image"/>
     <section ref="tweets" class="h-padding-lr-10">
-      <div class="container" :style="{opacity}">
+      <div class="container">
         <template v-for="tweet in tweets">
           <Card :name="tweet.name"
                 :key="tweet.text"
@@ -36,12 +36,8 @@
     },
     computed: {
       ...mapGetters({
-        tweets: 'twitter/getTweets',
-        client: 'twitter/getClient'
+        tweets: 'twitter/getTweets'
       }),
-      opacity() {
-        return this.client ? 1 : 0;
-      },
       image() {
         return require('@/assets/images/KLogo.png')
       }

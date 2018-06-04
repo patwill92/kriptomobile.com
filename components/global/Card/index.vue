@@ -52,6 +52,7 @@
 
 <style module lang="sass">
   .root
+    box-shadow: 0 2px 3px rgba(96, 195, 163, .2), 0 0 0 1px rgba(96, 195, 163, .2)
     *
       color: hsl(0, 0%, 4%) !important
   .image

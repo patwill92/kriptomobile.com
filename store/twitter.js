@@ -6,18 +6,12 @@ export const state = () => ({
 });
 
 export const getters = {
-  getTweets: ({tweets}) => tweets,
-  getClient: ({client}) => client
+  getTweets: ({tweets}) => tweets
 };
 
 export const mutations = {
   [GET_TWEETS]: (state, tweets) => {
-    if(tweets.client) {
-      state.tweets = tweets.tweets;
-      state.client = tweets.client;
-    } else {
-      state.tweets = tweets.tweets;
-    }
+    state.tweets = tweets
   }
 };
 
