@@ -58,7 +58,7 @@
   .image
     width: auto
     max-height: 300px
-    .avatar
-      img
-        border-radius: 50%
+  .avatar
+    img
+      border-radius: 50%
 </style>
