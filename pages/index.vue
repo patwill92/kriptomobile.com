@@ -2,7 +2,7 @@
   <main class="h-padding-b-40">
     <Hero/>
     <section ref="tweets" class="h-padding-lr-10">
-      <div class="container">
+      <div class="container" :style="{opacity}">
         <template v-for="tweet in tweets">
           <Card :name="tweet.name"
                 :key="tweet.text"
@@ -36,8 +36,12 @@
     },
     computed: {
       ...mapGetters({
-        tweets: 'twitter/getTweets'
-      })
+        tweets: 'twitter/getTweets',
+        client: 'twitter/getClient'
+      }),
+      opacity() {
+        return this.client ? 1 : 0;
+      }
     },
     components: {
       Hero,

@@ -56,7 +56,7 @@
       color: hsl(0, 0%, 4%) !important
   .image
     width: auto
-    height: 200px
+    max-height: 300px
     .avatar
       img
         border-radius: 50%
