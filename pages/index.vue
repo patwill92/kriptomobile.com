@@ -1,6 +1,6 @@
 <template>
   <main class="h-padding-b-40">
-    <Hero/>
+    <Hero :image="image"/>
     <section ref="tweets" class="h-padding-lr-10">
       <div class="container" :style="{opacity}">
         <template v-for="tweet in tweets">
@@ -41,6 +41,9 @@
       }),
       opacity() {
         return this.client ? 1 : 0;
+      },
+      image() {
+        return require('@/assets/images/KLogo.png')
       }
     },
     components: {

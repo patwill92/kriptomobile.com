@@ -3,12 +3,12 @@
     name: 'Hero',
     functional: true,
     render(h, ctx) {
-      const {$style} = ctx;
+      const {$style, props: {image}} = ctx;
       return (
         <section class="hero is-black h-margin-b-30">
           <div class="hero-body">
             <div class="container">
-              <img class={$style.logo} src="KLogo.png" alt=""/>
+              <img class={$style.logo} src={image} alt="LOGO"/>
               <h2 class={['title has-text-white is-uppercase h-margin-t-20', $style.title]}>
                 Money is changing, so should your phone.
               </h2>
