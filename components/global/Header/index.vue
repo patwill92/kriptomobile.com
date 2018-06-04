@@ -14,7 +14,7 @@
           </span>
         </nuxt-link>
       </div>
-        <Menu/>
+        <Menu :twitterSection="twitterSection"/>
     </div>
   </header>
 </template>
@@ -24,6 +24,7 @@
   import Menu from './Menu'
 
   export default {
+    props: ['twitterSection'],
     components: {
       Burger,
       Menu

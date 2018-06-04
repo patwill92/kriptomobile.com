@@ -1,7 +1,7 @@
 <template>
   <main class="h-padding-b-40">
     <Hero/>
-    <section class="h-padding-lr-10">
+    <section ref="tweets" class="h-padding-lr-10">
       <div class="container">
         <template v-for="tweet in tweets">
           <Card :name="tweet.name"
@@ -31,6 +31,9 @@
   import {mapGetters} from 'vuex'
 
   export default {
+    mounted() {
+      this.$parent.$parent.$refs.tweets = this.$refs.tweets
+    },
     computed: {
       ...mapGetters({
         tweets: 'twitter/getTweets'
