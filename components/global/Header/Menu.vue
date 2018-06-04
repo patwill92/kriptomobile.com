@@ -7,9 +7,8 @@
       return [
         <nav class={['h-display-flex h-align-center h-justify-center h-justify-lg-end', $style.nav]}>
           <div class="h-display-flex h-align-center h-justify-end">
-            <nuxt-link class={['navbar-item is-capitalized', $style.medium]} to="/about">about</nuxt-link>
-            <nuxt-link class={['navbar-item is-capitalized', $style.medium]} to="/feed">feed</nuxt-link>
-            <nuxt-link class={['navbar-item is-capitalized', $style.medium]} to="/contact">contact</nuxt-link>
+            <nuxt-link class={['navbar-item is-uppercase has-text-black', $style.medium]} to="/feed">feed</nuxt-link>
+            <nuxt-link class={['navbar-item is-uppercase has-text-black', $style.medium]} to="/contact">contact</nuxt-link>
           </div>
         </nav>,
         <div class={['h-display-flex h-align-center', $style.emailWrapper]}>
@@ -17,9 +16,9 @@
             <span class={[$style.icon, 'h-display-inline-flex']}>
               <v-icon icon="Envelope"/>
             </span>
-            <a class={['h-padding-l-10 h-padding-l-lg-0 h-margin-l-10', $style.link]}>
-              <span class="h-display-none h-display-lg-inline">kteam@kriptomobile.com</span>
-              <span class={['h-display-lg-none h-padding-l-5', $style.iconTwitter]}>
+            <a href="mailto:info@kriptomobile.com" class={['h-padding-l-10 h-padding-l-lg-0 h-margin-l-10', $style.link]}>
+              <span class="h-display-none h-display-lg-inline is-uppercase has-text-black">info@kriptomobile.com</span>
+              <span class={['h-display-lg-none h-padding-l-5 has-text-black', $style.iconTwitter]}>
                 <v-icon icon="Twitter"/>
               </span>
             </a>
@@ -56,7 +55,6 @@
     top: 1px
   .link
     border-left: 1px solid #dddddd
-    color: hsl(0, 0%, 29%) !important
     text-decoration: none
     font-weight: 600
     font-size: 16px

@@ -5,12 +5,6 @@ module.exports = {
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: 'Nuxt.js project'}
-    ],
-    link: [
-
-    ],
-    script: [
-      {defer: true, src: 'https://use.fontawesome.com/releases/v5.0.7/js/all.js'}
     ]
   },
   css: [
@@ -19,6 +13,7 @@ module.exports = {
   plugins: ['~/plugins/components.js', '~/plugins/twitter.js'],
   loading: {color: 'hsl(228, 26%, 27%)'},
   build: {
+    vendor: ['axios'],
     extend(config, {isDev, isClient}) {
       const vueLoader = config.module.rules.find(({loader}) => loader === 'vue-loader');
       vueLoader.options.cssModules = {
@@ -36,7 +31,14 @@ module.exports = {
     },
     postcss: {
       plugins: {
-        'postcss-custom-properties': false
+        'postcss-cssnext': {
+          browsers: [
+            'last 2 versions',
+            'iOS >= 8',
+            'Safari >= 8',
+            'ie >= 10'
+          ]
+        }
       }
     }
   },

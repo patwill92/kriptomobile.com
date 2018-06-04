@@ -9,8 +9,8 @@
             </span>
           </span>
           <span class="h-margin-l-10" :class="$style.logoText">
-            <span class="is-uppercase h-display-block h-font-bold">kripto</span>
-            <span class="is-uppercase h-display-block h-font-bold">mobile</span>
+            <span class="is-uppercase h-display-block h-font-bold has-text-black">kripto</span>
+            <span class="is-uppercase h-display-block h-font-bold has-text-black">mobile</span>
           </span>
         </nuxt-link>
       </div>

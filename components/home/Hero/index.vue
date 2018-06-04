@@ -2,16 +2,15 @@
   export default {
     name: 'Hero',
     functional: true,
-    render(h) {
+    render(h, ctx) {
+      const {$style} = ctx;
       return (
-        <section class="hero is-primary">
+        <section class="hero is-black h-margin-b-30">
           <div class="hero-body">
             <div class="container">
-              <h1 class="title">
-                Kriptomobile
-              </h1>
-              <h2 class="subtitle">
-                Coming Soon
+              <img class={$style.logo} src="KLogo.png" alt=""/>
+              <h2 class={['title has-text-white is-uppercase h-margin-t-20', $style.title]}>
+                Money is changing, so should your phone.
               </h2>
             </div>
           </div>
@@ -20,3 +19,11 @@
     }
   }
 </script>
+
+<style module lang="sass">
+  .logo
+    max-width: 200px
+    height: auto
+  .title
+    font-weight: 300 !important
+</style>
