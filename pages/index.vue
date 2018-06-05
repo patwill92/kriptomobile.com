@@ -17,7 +17,7 @@
             <span class="h-margin-r-10">
               <v-icon icon="Envelope"/>
             </span>
-            find out more
+            Find out more
           </a>
         </div>
       </div>
