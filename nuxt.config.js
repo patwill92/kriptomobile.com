@@ -39,11 +39,12 @@ module.exports = {
       plugins: {
         'postcss-cssnext': {
           browsers: [
-            'last 2 versions',
+            'last 3 versions',
             'iOS >= 8',
             'Safari >= 8',
             'ie >= 10'
-          ]
+          ],
+          grid: true
         }
       }
     }
