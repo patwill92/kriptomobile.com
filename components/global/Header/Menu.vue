@@ -3,9 +3,9 @@
     name: 'DesktopMenu',
     functional: true,
     render(h, ctx) {
-      const {$style, props: {twitterSection}} = ctx;
+      const {$style, props: {twitterSection, show}} = ctx;
       return [
-        <nav class={['h-display-flex h-align-center h-justify-center h-justify-lg-end', $style.nav]}>
+        <nav style={{height: show ? '40px' : 0}} class={['h-display-flex h-align-center h-justify-center h-justify-lg-end', $style.nav]}>
           <div class="h-display-flex h-align-center h-justify-end">
             <a onClick={(e) => {
               e.preventDefault();
@@ -40,7 +40,10 @@
   .nav
     order: 3
     flex-basis: 100%
+    transition: height 0.1s linear
+    overflow: hidden
     +desktop
+      height: auto !important
       justify-self: flex-end
       order: 2
       flex: 1

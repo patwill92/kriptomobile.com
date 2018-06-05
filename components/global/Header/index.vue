@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar has-shadow is-spaced h-padding-tb-5 h-padding-tb-lg-10" role="navigation" aria-label="main navigation">
+  <header ref="header" class="navbar is-fixed-top has-shadow is-spaced h-padding-tb-5 h-padding-tb-lg-10" role="navigation" aria-label="main navigation">
     <div class="container h-align-center h-justify-between" :class="$style.container">
       <div class="navbar-brand h-margin-l-0">
         <nuxt-link :class="$style.logoWrapper" class="navbar-item h-padding-0" to="/">
@@ -14,7 +14,7 @@
           </span>
         </nuxt-link>
       </div>
-        <Menu :twitterSection="twitterSection"/>
+        <Menu :show="show" :twitterSection="twitterSection"/>
     </div>
   </header>
 </template>
@@ -25,6 +25,30 @@
 
   export default {
     props: ['twitterSection'],
+    data() {
+      return {
+        pos: 0,
+        show: true
+      }
+    },
+    beforeMount() {
+      window.addEventListener('scroll', this.getHeaderPos)
+    },
+    methods: {
+      getHeaderPos() {
+        this.pos = document.body.getBoundingClientRect().y
+      }
+    },
+    watch: {
+      pos(n, o) {
+       if(n < -200 || o < -200) {
+         if(n < o) {
+           return this.show = false;
+         }
+         return this.show = true;
+       }
+      }
+    },
     components: {
       Burger,
       Menu

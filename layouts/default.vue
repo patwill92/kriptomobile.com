@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.root">
+  <div :class="[$style.root]" id="layoutRoot">
     <Header :twitterSection="$refs"/>
     <nuxt/>
     <Footer/>
@@ -24,5 +24,7 @@
     width: inherit
     display: grid
     grid-template-columns: 1fr
-    grid-template-rows: auto 1fr auto
+    grid-template-rows: 102px 1fr auto
+    +desktop
+      grid-template-rows: 76px 1fr auto
 </style>
