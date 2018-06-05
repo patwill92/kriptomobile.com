@@ -10,6 +10,9 @@
             <a onClick={(e) => {
               e.preventDefault();
               const param = twitterSection.tweets.getBoundingClientRect().y;
+              if(!!document.documentMode) {
+                return window.scrollTo(0, param)
+              }
               window.scroll({
                 top: param,
                 behavior: "smooth"

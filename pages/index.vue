@@ -1,6 +1,6 @@
 <template>
   <main class="h-padding-b-40">
-    <Hero :image="image"/>
+    <Hero :image="image" :mounted="mounted"/>
     <section ref="tweets" class="h-padding-lr-10">
       <div class="container">
         <template v-for="tweet in tweets">
@@ -31,7 +31,13 @@
   import {mapGetters} from 'vuex'
 
   export default {
+    data() {
+      return {
+        mounted: false
+      }
+    },
     mounted() {
+      this.mounted = true;
       this.$parent.$parent.$refs.tweets = this.$refs.tweets
     },
     computed: {
