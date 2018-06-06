@@ -10,7 +10,8 @@
           avatar,
           date,
           text,
-          image
+          image,
+          linkUrl
         }, $style
       } = ctx;
 
@@ -32,9 +33,9 @@
               {text}
               <br/>
               {
-                image &&
+                (image || linkUrl) &&
                 <figure class="has-text-left">
-                  <img class={$style.image} src={image}/>
+                  <img class={$style.image} src={image ? image : linkUrl}/>
                 </figure>
               }
             </div>
