@@ -35,7 +35,7 @@
               {
                 (image || linkUrl) &&
                 <figure class={['has-text-left h-margin-lr-0 h-margin-t-15 h-margin-b-0 h-display-inline-flex', $style.figure]}>
-                  <img class={$style.image} src={image ? image : linkUrl[0]}/>
+                  <img class={$style.image} src={image ? image : linkUrl}/>
                 </figure>
               }
             </div>
