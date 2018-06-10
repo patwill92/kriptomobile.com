@@ -11,7 +11,8 @@
           date,
           text,
           image,
-          linkUrl
+          linkUrl,
+          imageUrl
         }, $style
       } = ctx;
 
@@ -35,7 +36,13 @@
               {
                 (image || linkUrl) &&
                 <figure class={['has-text-left h-margin-lr-0 h-margin-t-15 h-margin-b-0', $style.figure]}>
-                  <img class={$style.image} src={image ? image : linkUrl}/>
+                  {
+                    imageUrl ?
+                      <a href={imageUrl} class="pointer" target="_blank">
+                        <img class={$style.image} src={image ? image : linkUrl}/>
+                      </a> :
+                      <img class={$style.image} src={image ? image : linkUrl}/>
+                  }
                 </figure>
               }
             </div>

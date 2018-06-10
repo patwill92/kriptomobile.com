@@ -10,6 +10,7 @@
                 :image="tweet.image"
                 :date="tweet.date"
                 :text="tweet.text"
+                :imageUrl="tweet.imageUrl"
                 :linkUrl="tweet.linkUrl"
                 :username="tweet.username"/>
         </template>
