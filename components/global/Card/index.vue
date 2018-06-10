@@ -34,7 +34,7 @@
               <br/>
               {
                 (image || linkUrl) &&
-                <figure class={['has-text-left h-margin-lr-0 h-margin-t-15 h-margin-b-0 h-display-inline-flex', $style.figure]}>
+                <figure class={['has-text-left h-margin-lr-0 h-margin-t-15 h-margin-b-0', $style.figure]}>
                   <img class={$style.image} src={image ? image : linkUrl}/>
                 </figure>
               }
@@ -61,10 +61,8 @@
     width: auto
     max-height: 300px
     border-radius: 4px
+    box-shadow: 0 2px 3px rgba(55,55,55, .2), 0 0 0 1px rgba(55,55,55, .2)
   .avatar
     img
       border-radius: 50%
-  .figure
-    border-radius: 4px
-    box-shadow: 0 2px 3px rgba(55,55,55, .2), 0 0 0 1px rgba(55,55,55, .2)
 </style>
