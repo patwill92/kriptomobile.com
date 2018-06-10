@@ -10,10 +10,12 @@
         '';
       return (
         <section class={["hero is-black h-margin-b-30", ieClass]}>
-          <div class="hero-body">
+          <div class="hero-body h-padding-lr-10">
             <div class="container">
-              <img class={$style.logo} src={image} alt="LOGO"/>
-              <h2 class={['title has-text-white is-uppercase h-margin-t-20', $style.title]}>
+              <span class="h-display-inline-flex has-text-white" class={$style.icon}>
+                <v-icon icon="KripLogo"/>
+              </span>
+              <h2 class={['title has-text-white is-uppercase h-margin-t-15', $style.title]}>
                 Money is changing, so should your phone.
               </h2>
             </div>
@@ -31,7 +33,10 @@
     .title
       font-weight: 300 !important
   .iEHero
-    margin-top: 102px
+    margin-top: 62px
     +desktop
       margin-top: 76px
+  .icon
+    font-size: 120px
+    line-height: 120px
 </style>

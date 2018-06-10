@@ -3,64 +3,34 @@
     name: 'DesktopMenu',
     functional: true,
     render(h, ctx) {
-      const {$style, props: {twitterSection, show}} = ctx;
-      return [
-        <nav style={{height: show ? '40px' : 0}} class={['h-display-flex h-align-center h-justify-center h-justify-lg-end', $style.nav]}>
-          <div class="h-display-flex h-align-center h-justify-end">
-            <a onClick={(e) => {
-              e.preventDefault();
-              const param = twitterSection.tweets.getBoundingClientRect().y;
-              if(!!document.documentMode) {
-                return window.scrollTo(0, param)
-              }
-              window.scroll({
-                top: param,
-                behavior: "smooth"
-              });
-            }} class={['navbar-item is-uppercase has-text-black', $style.medium]}>feed</a>
-            <a href="mailto:info@kriptomobile.com" class={['navbar-item is-uppercase has-text-black', $style.medium]}>contact</a>
-          </div>
-        </nav>,
-        <div class={['h-display-flex h-align-center', $style.emailWrapper]}>
-          <span class={[$style.email, 'h-margin-l-10 h-display-flex h-align-center h-padding-lr-20']}>
+      const {$style} = ctx;
+      return (
+        <nav class={['h-display-flex h-align-center', $style.emailWrapper]}>
+          <a href="https://twitter.com/KriptoMobile" class={['h-padding-r-10 has-text-black', $style.iconTwitter]}>
+            <v-icon icon="Twitter"/>
+          </a>
+          <span class={[$style.email, 'h-margin-l-10 h-display-flex h-align-center h-padding-l-20']}>
             <a href="mailto:info@kriptomobile.com" class={[$style.icon, 'h-display-inline-flex has-text-black']}>
               <v-icon icon="Envelope"/>
             </a>
-            <span class={['h-padding-l-10 h-padding-l-lg-0 h-margin-l-10', $style.link]}>
+            <span class={['h-margin-l-10', $style.link]}>
               <a href="mailto:info@kriptomobile.com" class="h-display-none h-display-lg-inline is-uppercase has-text-black">info@kriptomobile.com</a>
-              <a href="https://twitter.com/KriptoMobile" class={['h-display-lg-none h-padding-l-5 has-text-black', $style.iconTwitter]}>
-                <v-icon icon="Twitter"/>
-              </a>
             </span>
           </span>
-        </div>
-      ]
+        </nav>
+      )
     }
   }
 </script>
 
 <style module lang="sass">
-  .nav
-    order: 3
-    flex-basis: 100%
-    transition: height 0.1s linear
-    overflow: hidden
-    +desktop
-      height: auto !important
-      justify-self: flex-end
-      order: 2
-      flex: 1
-    .medium
-      cursor: pointer
-      font-weight: 600
   .emailWrapper
     order: 2
     +desktop
       order: 3
   .email
     font-size: 18px
-    +desktop
-      border-left: 1px solid #dddddd
+    border-left: 1px solid #dddddd
   .icon
     position: relative
     top: 2px

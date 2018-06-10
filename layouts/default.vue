@@ -24,7 +24,7 @@
     width: inherit
     display: grid
     grid-template-columns: 1fr
-    grid-template-rows: 102px 1fr auto
+    grid-template-rows: 62px 1fr auto
     +desktop
       grid-template-rows: 76px 1fr auto
 </style>

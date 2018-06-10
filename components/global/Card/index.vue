@@ -34,8 +34,8 @@
               <br/>
               {
                 (image || linkUrl) &&
-                <figure class="has-text-left">
-                  <img class={$style.image} src={image ? image : linkUrl}/>
+                <figure class={['has-text-left h-margin-lr-0 h-margin-t-15 h-margin-b-0 h-display-inline-flex', $style.figure]}>
+                  <img class={$style.image} src={image ? image : linkUrl[0]}/>
                 </figure>
               }
             </div>
@@ -54,12 +54,17 @@
 <style module lang="sass">
   .root
     box-shadow: 0 2px 3px rgba(96, 195, 163, .2), 0 0 0 1px rgba(96, 195, 163, .2)
+    border-radius: 4px
     *
       color: hsl(0, 0%, 4%) !important
   .image
     width: auto
     max-height: 300px
+    border-radius: 4px
   .avatar
     img
       border-radius: 50%
+  .figure
+    border-radius: 4px
+    box-shadow: 0 2px 3px rgba(55,55,55, .2), 0 0 0 1px rgba(55,55,55, .2)
 </style>

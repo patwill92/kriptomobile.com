@@ -2,7 +2,7 @@
   <main class="h-padding-b-40">
     <Hero :image="image" :mounted="mounted"/>
     <section ref="tweets" class="h-padding-lr-10">
-      <div class="container">
+      <div :class="$style.cardContainer">
         <template v-for="tweet in tweets">
           <Card :name="tweet.name"
                 :key="tweet.text"
@@ -15,10 +15,10 @@
         </template>
         <div class="has-text-centered">
           <a  href="mailto:info@kriptomobile.com" class="button is-black is-uppercase is-large">
-            <span class="h-margin-r-10">
+            <span :class="$style.button" class="h-margin-r-10 h-display-inline-flex">
               <v-icon icon="Envelope"/>
             </span>
-            Find out more
+            Contact us
           </a>
         </div>
       </div>
@@ -55,3 +55,12 @@
     }
   }
 </script>
+
+<style module lang="sass">
+  .cardContainer
+    margin: auto
+    max-width: 600px
+  .button
+    position: relative
+    top: 2px
+</style>
