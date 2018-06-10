@@ -3,7 +3,7 @@
     <div class="container h-align-center h-justify-between" :class="$style.container">
       <div class="navbar-brand h-margin-l-0">
         <nuxt-link :class="$style.logoWrapper" class="navbar-item h-padding-0" to="/">
-          <span class="h-display-inline-flex h-padding-l-10 h-padding-l-lg-0 has-text-primary" :class="$style.icon">
+          <span class="h-display-inline-flex h-padding-l-10 h-padding-l-lg-0 has-text-black" :class="$style.icon">
             <v-icon icon="KripLogo"/>
           </span>
         </nuxt-link>
