@@ -12,7 +12,10 @@ module.exports = {
         type: 'image/x-icon',
         href: 'kriptomobile.ico',
       }
-    ]
+    ],
+    htmlAttrs: {
+      lang: 'en'
+    }
   },
   css: [
     '~/assets/styles.sass'
