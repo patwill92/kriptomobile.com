@@ -4,7 +4,9 @@ module.exports = {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {name: 'twitter:image', content: 'https://kriptomobile.herokuapp.com/KRIP.png'}
+      {name: 'twitter:image', content: 'https://kriptomobile.herokuapp.com/KRIP.png'},
+      {property:"og:image",content: 'https://pbs.twimg.com/profile_images/1003341251062747137/hffXd3dA_normal.jpg'}
+
     ],
     link: [
       {
