@@ -33,6 +33,8 @@
         </div>
       </div>
     </section>
+    <br><br><br>
+    <TestComponent/>
   </main>
 </template>
 
@@ -40,6 +42,7 @@
   import Hero from '@/components/home/Hero'
   import Card from '@/components/global/Card'
   import LoadingIcon from '@/components/global/icon/Loading'
+  import TestComponent from '@/components/global/TestComponent'
   import {mapGetters, mapActions} from 'vuex'
 
   import {HYDRATE_TWEETS} from "../types";
@@ -85,7 +88,8 @@
     components: {
       Hero,
       Card,
-      LoadingIcon
+      LoadingIcon,
+      TestComponent
     }
   }
 </script>
