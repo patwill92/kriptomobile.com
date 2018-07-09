@@ -3,7 +3,7 @@
     name: 'Hero',
     functional: true,
     render(h, ctx) {
-      const {$style, props: {image, mounted}} = ctx;
+      const {$style, props: {mounted}} = ctx;
       const ieClass = mounted &&
       !!document.documentMode ?
         $style.iEHero :

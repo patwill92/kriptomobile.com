@@ -8,43 +8,16 @@
           </span>
         </nuxt-link>
       </div>
-        <Menu :show="show" :twitterSection="twitterSection"/>
+        <Menu />
     </div>
   </header>
 </template>
 
 <script>
-  import Burger from './Burger'
   import Menu from './Menu'
 
   export default {
-    props: ['twitterSection'],
-    data() {
-      return {
-        pos: 0,
-        show: true
-      }
-    },
-    beforeMount() {
-      window.addEventListener('scroll', this.getHeaderPos)
-    },
-    methods: {
-      getHeaderPos() {
-        this.pos = document.body.getBoundingClientRect().y
-      }
-    },
-    watch: {
-      pos(n, o) {
-       if(n < -200 || o < -200) {
-         if(n < o) {
-           return this.show = false;
-         }
-         return this.show = true;
-       }
-      }
-    },
     components: {
-      Burger,
       Menu
     }
   }

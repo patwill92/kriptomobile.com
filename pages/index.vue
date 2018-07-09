@@ -1,6 +1,6 @@
 <template>
   <main class="h-padding-b-40">
-    <Hero :image="image" :mounted="mounted"/>
+    <Hero :mounted="mounted"/>
     <section ref="tweets" class="h-padding-lr-10">
       <div :class="$style.cardContainer">
         <template v-for="tweet in getTweets">
@@ -53,15 +53,11 @@
     },
     mounted() {
       this.mounted = true;
-      this.$parent.$parent.$refs.tweets = this.$refs.tweets
     },
     computed: {
       ...mapGetters({
         tweets: 'twitter/getTweets'
       }),
-      image() {
-        return require('@/assets/images/KLogo.png')
-      },
       getTweets() {
         return this.tweets.slice(0, this.tweets.length - 1)
       },

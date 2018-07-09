@@ -1,6 +1,6 @@
 <template>
   <div :class="[$style.root]" id="layoutRoot">
-    <Header :twitterSection="$refs"/>
+    <Header />
     <nuxt/>
     <Footer/>
   </div>

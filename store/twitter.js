@@ -1,8 +1,7 @@
 import {GET_TWEETS, HYDRATE_TWEETS} from "@/types";
 
 export const state = () => ({
-  tweets: [],
-  client: false
+  tweets: []
 });
 
 export const getters = {
